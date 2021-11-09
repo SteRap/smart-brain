@@ -22,7 +22,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/", (res) => {
   res.send("It's working!");
 });
 app.post("/signin", signin.handleSignIn(db, bcrypt));
